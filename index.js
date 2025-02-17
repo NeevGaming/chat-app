@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const router = require("./router/router");
 const http = require("http");
 const { Server } = require("socket.io");
+const serverless = require("serverless-http");
 
 const server = http.createServer(app);
 const io = new Server(server);
@@ -74,3 +75,4 @@ app.get("*", (req, res) => {
 // });
 
 module.exports = server;
+module.exports.handler = serverless(server);
