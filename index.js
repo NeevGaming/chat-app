@@ -69,6 +69,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
-server.listen(3000, function () {
-  console.log("Server started on :3000");
-});
+// server.listen(3000, function () {
+//   console.log("Server started on :3000");
+// });
+
+module.exports = server;
