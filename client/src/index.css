@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgb(87, 1, 14) 0%, hsla(9, 59%, 7%, 1) 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+}
+
+.contacts {
+    width: 30vw;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.contact {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact.active {
+    background-color: #d40021;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.contact-name {
+    font-weight: bold;
+}
+
+.contact-email {
+    font-style: italic;
+    color: gray;
+}
+
+.contact-last-message {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-message {
+    color: #333;
+}
+
+.last-time {
+    color: #999;
+}
+
+.chatPanel {
+    width: 70vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.message.sent {
+    background-color: #51ff51;
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+.message.received {
+    background-color: #ff5151;
+    display: block;
+    margin-right: auto;
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message-text {
+    margin-bottom: 5px;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.message-input {
+    display: flex;
+    align-items: center;
+}
+
+.message-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    background-color: #d40021;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-input button:hover {
+    background-color: #b3001b;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login h1 {
+    text-align: center;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    background-color: rgba(46, 10, 10, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    width: 100%;
+}
+
+.container input[type="email"],
+.container input[type="password"] {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(74, 26, 26, 0.9);
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    border-color: #EE2625;
+    outline: none;
+}
+
+.container label {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.forget {
+    text-align: right;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.forget a:hover {
+    color: #EE2625;
+}
+
+.container button {
+    background-color: #EE2625;
+    display: block;
+    color: white;
+    margin: 10px auto;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container button:hover {
+    background-color: #d40021;
+    transform: translateY(-2px);
+}
+
+.container button:active {
+    transform: translateY(0);
+}
+.add-contact{
+    padding: 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #EE2625;
+    box-shadow: 1px 1px 2px #888;
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-top: auto;
+    color: white;
+}
+.add-contact:hover{
+    background-color: #b3001b;
+}
+a{
+    text-decoration: none;
+}
+.add-contact-form{
+    width: 30vw;
+    display: block;
+    margin: auto;
+    margin-top: calc((100vh - 25vh)/2);
+}
+.add-contact-form input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    margin: 10px 0;
+}
+.add-contact-form button{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: #d40021;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.add-contact-form div button{
+    width: 10%;
+    font-size: 1.2em;
+    margin-right: auto;
+}
+.add-contact-form button:hover{
+    background-color: #b3001b;
+}
