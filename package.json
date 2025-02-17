@@ -1,0 +1,52 @@
+{
+  "name": "chat-full-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "cross-env NODE_ENV=\"production\" webpack --config client/webpack.config.js",
+    "dev": "cross-env NODE_ENV=\"development\" nodemon --ignore ./client/ index.js"
+  },
+  "author": "",
+  "keywords": [
+    "express",
+    "react",
+    "template",
+    "babel",
+    "webpack"
+  ],
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^3.0.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@svgr/webpack": "^6.2.1",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.15",
+    "postcss-import": "^16.1.0",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-hot-middleware": "^2.25.1"
+  }
+}
